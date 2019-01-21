@@ -43,9 +43,3 @@
 					<a href="tel:+(903) 722 17 03">(903) 722 17 03</a>
 				</div>
 			</div>
-			<div class="header-maar24__context">
-				<h1>Help your appliances  work to the max</h1>
-				<p>Reliable repair partner.  In order to avoid the risk of acciden</p>
-			</div>
-		</div>
-	</header>
