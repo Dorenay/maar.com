@@ -156,6 +156,22 @@
 		</div>
 	</section>
 
+	<section class="info-sec info-sec--reverse">
+		<div class="container-sn info-sec__flex">
+			<div class="info-sec__image">
+				<img src="<?php echo get_template_directory_uri()?>/img/KitchenAidLandingPage.jpg" alt="img">
+			</div>
+			<div class="info-sec__text">
+				<div class="info-sec__textContainer">
+					<h3>Alex Johnson</h3>
+					<p>The oven can be gas or electric, perhaps even a combination. Like any home appliances, the oven fails. Mainly, pollution, insects, aging, unstable voltage in the network or disturbance during operation lead to malfunctions. </p>
+					<p>The oven which is built in kitchen furniture or established separately, not for nothing is in demand. The possibility of installing it in any place, separately from the plate, even on a shelf, even on the table, makes use much more appropriate. Accordingly, the number of families in which there is this device is quite large – and the repair of ovens is a very common service.For high-quality oven cleaning, pour a little liquid ammonia into a small container and leave it in a cold oven for the night. In the morning, the dirt easily lags behind the walls of the electric oven. But you need to do it all with an open window, and then evaporation. Don’t forget to wear rubber gloves. The smell isn’t long.
+						The oven can be gas or electric, perhaps even a combination. Like any home appliances, the oven fails. Mainly, pollution, insects, aging, unstable voltage in the network or disturbance during operation lead to malfunctions. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="logo-cm">
 		<div class="container">
 			<div class="logo-cm__slider">
