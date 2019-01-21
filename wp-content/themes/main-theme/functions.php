@@ -32,7 +32,8 @@ add_theme_support( 'post-thumbnails' );
 
 function theme_scripts() {
     wp_enqueue_style( 'theme-css', get_stylesheet_uri() );
-    wp_enqueue_style( 'avt-js--jq-slick', get_template_directory_uri() . '/libs/slick/slick.css');   
+	wp_enqueue_style( 'avt-js--jq-slick', get_template_directory_uri() . '/libs/slick/slick.css');
+	wp_enqueue_style( 'avt-js--jq-slick-theme', get_template_directory_uri() . '/libs/slick/slick-theme.css');
     wp_enqueue_style( 'theme-css--2', get_template_directory_uri() . '/css/application.css' );
 
     wp_enqueue_script( 'avt-js--jq', get_template_directory_uri() . '/libs/jquery/dist/jquery.min.js');

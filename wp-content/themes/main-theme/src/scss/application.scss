@@ -153,11 +153,65 @@ body{
 					&:hover:after{
 						opacity: 1;
 						visibility: visible
-                    }
+					}
+					&:hover ~ .header-maar24__navigationSub{
+						opacity: 1;
+						visibility: visible;
+						transition: .2s;
+					}
                 }
-            } 
-        }
-    }
+            }
+		}
+		.header-maar24__navigationSub{
+			position: absolute;
+			background-color: #ffffff;
+			padding: 15px 20px 10px 20px; 
+			top: 95px;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			visibility: hidden;
+			transition: 0.2s linear 0.8s;
+			@media only screen and (max-width : 1100px){
+				opacity: 1;
+				visibility: visible;
+				position: static;
+				transform: translateX(0);
+			}
+			&:hover{
+				opacity: 1;
+				visibility: visible;
+				padding: 15px 20px 5px 20px; 
+			}
+			&:after{
+				content: " ";
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-color: #ffffff;
+				position: absolute;
+				top: -10px;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+				@media only screen and (max-width : 1100px){
+					display: none;
+				}
+			}
+			li{
+				margin: 0 0 8px 0;
+				padding: 0;
+				display: block;
+				text-align: center;
+				a{
+					color: #111;
+					white-space: nowrap;
+					&:hover:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
 	&__phone{
 		flex: 0 0 45%;
 		display: flex;
@@ -215,7 +269,7 @@ body{
 		h1 {
 			font-size: 48px;
 			margin: 0 0 60px 0;
-			color: blue;
+			color: #111111;
 			line-height: 1.1;
 			@media only screen and (max-width : 768px){
 				font-size: 38px;
@@ -530,7 +584,7 @@ body{
 		flex: auto;
 		margin-left: -265px;
 		padding: 45px 100px 15px 100px;
-		background-color: #ffffff;
+		background-color: rgba(255, 255, 255, 0.9);
 		border-bottom-right-radius: 200px;
 		@media only screen and (max-width : 1500px){
 			margin-left: -65px
@@ -561,10 +615,29 @@ body{
 			line-height: 1.5;
 			@media only screen and (max-width : 768px){
 				font-size: 13px;
-				margin: 0 0 10px 0
+				margin: 0 0 10px 0;
             }
         }
-    }
+	}
+	&--reverse{
+		.info-sec__flex{
+			flex-direction: row-reverse;
+		}
+		.info-sec__text{
+			margin-left: 0;
+			margin-right: -265px;
+			@media only screen and (max-width : 1500px){
+				margin-right: -65px
+			}
+			@media only screen and (max-width : 1100px){
+				margin-right: 0;
+				padding: 45px 0 15px 0
+			}
+			@media only screen and (max-width : 768px){
+				padding: 25px 0 15px 0
+			}
+		}
+	}
 }
 .logo-cm{
 	padding: 45px 0 50px 0;
@@ -579,6 +652,7 @@ body{
             }
         }
 		.slick-prev{
+			content: " ";
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
