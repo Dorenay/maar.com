@@ -72,4 +72,4 @@ gulp.task('watch', ['sass', 'uglify'], function(){
   });
 });
 
-gulp.task('default', ['sass', 'uglify']);
+gulp.task('default', ['sass', 'uglify', 'watch']);

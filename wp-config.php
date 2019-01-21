@@ -38,7 +38,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 
 
-// define('WP_ALLOW_REPAIR', true);
+define('WP_ALLOW_REPAIR', true);
 /**#@+
  * Authentication Unique Keys and Salts.
  *
