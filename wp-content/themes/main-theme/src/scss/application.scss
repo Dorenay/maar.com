@@ -66,13 +66,36 @@ body{
 }
 .header-maar24{
 	position: relative;
-	padding-bottom: 265px;
+	padding-bottom: 150px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
+	&__container{
+		position: relative;
+		z-index: 555;
+	}
 	@media only screen and (max-width : 992px){
 		padding-bottom: 165px
-    }
+	}
+	&__heading-center{
+		color: #ffffff;
+		text-align: center;
+		h1{
+			margin: 0;
+		}
+	}
+	&__bread-crumps{
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 13px;
+		a{
+			color: inherit;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
 	&:after{
 		content: " ";
 		display: block;
@@ -91,7 +114,6 @@ body{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 50px;
 		position: relative;
 		@media only screen and (max-width : 1100px){
 			padding: 10px 0
@@ -386,13 +408,18 @@ body{
         }
     }
 	&__items{
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		flex: 0 0 260px;
-		background-color: #ffffff;
-		padding: 15px 15px 30px 15px;
-		box-shadow: 0px 5px 10px rgba(98,98,98,0.1);
+		padding: 15px;
 		margin-bottom: 25px;
+		box-shadow: 0px 5px 10px rgba(98,98,98,0.1);
+		background-color: #ffffff;
 		position: relative;
 		text-align: center;
+
 		@media only screen and (max-width : 580px){
 			flex: 0 0 100%;
 			margin-bottom: 15px;
@@ -477,6 +504,34 @@ body{
 	padding: 55px 0 65px 0;
 	background-image: url("../img/BG-first-section.jpg");
 	position: relative;
+	.wpcf7-form{
+		p{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			@media (max-width:922px) {
+				flex-direction: column;
+				max-width: 450px;
+				margin-left: auto;
+				margin-right: auto;
+				align-items: initial;
+			}
+		}
+		.wpcf7-form-control-wrap{
+			flex: 0 0 23%;
+			input{
+				padding-top: 18px;
+				padding-bottom: 18px;
+			}
+		}
+		[type=submit]{
+			margin-left: 0;
+			margin-right: 0;
+			flex: 0 0 23%;
+			margin-bottom: 15px;
+		}
+		
+	}
 	@media only screen and (max-width : 768px){
 		padding: 35px 0 45px 0
     }
@@ -733,7 +788,14 @@ body{
 				margin: 0 0 25px 0
             }
         }
-    }
+	}
+	&--contact-page{
+		margin-top: 50px;
+		.contact-maar24__content{
+			padding-top: 0px;
+			max-width: 450px;
+		}
+	}
 	&__content{
 		flex: 0 0 570px;
 		padding-left: 15px;
@@ -816,4 +878,126 @@ body{
 			font-size: 13px
         }
     }
+}
+.wpcf7-form-control-wrap{
+	display: block;
+	margin-bottom: 15px;
+	input{
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+.wpcf7-form{
+	[type="submit"]{
+		display: block;
+		border: none;
+		background-color: #3737f5;
+		color: #fff;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 50px;
+		padding-right: 50px;
+		text-transform: uppercase;
+		font-weight: bold;
+		cursor: pointer; 
+		&:hover{
+			background-color: blue;
+		}
+	}
+}
+div.wpcf7 .ajax-loader{
+	visibility: hidden;
+    display: inline-block;
+    background-image: url(../../images/ajax-loader.gif);
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.overlay {
+    position: fixed;
+    background-color: #0000008f;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+	display: none;
+	
+}
+.popup {
+    position: fixed;
+    top: 50px;
+    max-width: 450px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 5001;
+    display: none;
+	.cross{
+		position: absolute;
+		top: 30px;
+		left: auto;
+		right: 20px;
+		font-size: 40px;
+		color: rgba($color: #fff, $alpha: 0.5);
+		line-height: 1px;
+		cursor: pointer;
+		user-select: none;
+		transform: rotate(45deg);
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+.popup h2{
+    background-color: #3669cf;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+.popup input{
+    width: 100%;
+    padding: 10px;
+}
+.popup input[type="submit"]{
+    height: 68px;
+    line-height: 65px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    -webkit-box-shadow: 0 12px 35px rgba(255,158,32,.58);
+    box-shadow: 0 12px 35px rgba(255,158,32,.58);
+    background-color: #ff9e20;
+    border: 0;
+    padding: 0 110px;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+}
+.popup textarea{
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+.popup form{
+	padding: 20px;
+	max-width: 450px;
 }

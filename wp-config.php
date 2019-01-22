@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'compas1_client3');
+define('DB_NAME', 'maar');
 
 /** MySQL database username */
-define('DB_USER', 'compas1_client3');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'z4v2K5HlFGv7');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', 'compas1.mysql.tools');
+define('DB_HOST', '127.0.0.1:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -79,7 +79,10 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
+ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
 define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
 
 /* That's all, stop editing! Happy blogging. */
 
