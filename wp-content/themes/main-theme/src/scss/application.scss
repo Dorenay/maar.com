@@ -1008,3 +1008,55 @@ div.wpcf7 .ajax-loader{
 		transform: scale(1.07);
 	}
 }
+.compas_link .animation_text{
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	overflow: hidden;
+	line-height: 1.1;
+	margin-left: 3px;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	
+	}
+	.compas_link{
+		margin-top: 50px;
+		display: flex;
+		align-items: center;
+	}
+	.compas_link .animation_text a{
+	color: #18171c;
+	font-weight: 300;
+	}
+	.compas_link .animation_text:after{
+		content: " ";
+		height: 80%;
+		width: 2px;
+		background: rgba(255, 255, 255, 0.3);
+		position: absolute;
+		left: 10px;
+		top: 5px;
+		box-shadow: 2px 0 4px 2px rgba(255, 255, 255, 0.247), -1px 0 4px 2px rgba(255, 255, 255, 0.65);
+		animation: animationTEXT 5s cubic-bezier(0,-3,1,1) infinite;
+	}
+	.compas_link img{
+	animation: glyanec_img 5s infinite;
+		width: auto;
+		height: auto;
+	}
+	@keyframes animationTEXT{
+	from{
+		left: -10%;
+	}
+	to{
+		left: 110%
+	}
+	}
+	@keyframes glyanec_img{
+	0%{transform:rotate3d(10,0,0,0deg)}
+	20%{transform:rotate3d(10,0,0,0deg)}
+	40%{transform:rotate3d(10,0,0,0deg)}
+	60%{transform:rotate3d(0,10,0,180deg)}
+	80%{transform:rotate3d(10,0,0,0deg)}
+}
