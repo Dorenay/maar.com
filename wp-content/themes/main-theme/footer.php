@@ -25,7 +25,7 @@
 			<?php include('developed_by.php');?>
 		</div>
 		<div class="contact-maar24__maps">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d10295.239733957973!2d23.98903559855387!3d49.827237390612474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1sru!2sua!4v1547731857057" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<?php the_field('map_iframe', 80); ?>
 		</div>
 	</section>
 	<?php 
