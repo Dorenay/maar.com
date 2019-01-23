@@ -21,7 +21,7 @@
 					<button class="contact-maar24__brn reviews__button">massege</button>
 					<?php
 				}?>
-			<p class="contact-maar24__copyright">Copyright © 2018. All rights reserved.</p>
+			<!-- <p class="contact-maar24__copyright">Copyright © 2018. All rights reserved.</p> -->
 			<?php include('developed_by.php');?>
 		</div>
 		<div class="contact-maar24__maps">
