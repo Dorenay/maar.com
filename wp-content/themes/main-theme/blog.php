@@ -25,12 +25,13 @@
                         ?>
                             post
                         <?
-                        while ( $post->have_posts() ) {
-                            $post->the_post();
-                            the_content();
-                            the_excerpt();                            
+                        // while ( $post->have_posts() ) {
+                        //     $post->the_post();
+                        //     the_content();
+                        //     the_excerpt();                            
 
-                        }?>
+                        // }
+                        ?>
                             posts
                         <?
                         while ( $posts->have_posts() ) {
