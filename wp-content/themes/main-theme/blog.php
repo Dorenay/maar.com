@@ -18,8 +18,8 @@
                         <?php the_post_thumbnail(); ?> 
                     </div>
                     <div class="post__body">
+                        <h2><?php the_title(); ?></h2>
                         <?php
-                            the_title('h2', 'h2', '');
                             the_excerpt();                            
                         ?>
                     </div>
