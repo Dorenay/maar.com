@@ -23,6 +23,11 @@
                             the_content();
                             the_excerpt();                            
                         ?>
+                        <?php if (have_posts()) : while (have_posts()) : ?>
+                        <?php the_content(); ?>
+                        <?php the_excerpt(); ?>
+
+                        <?php endwhile; endif; ?>
                     </div>
                 </div>
             <?php endforeach;?>
