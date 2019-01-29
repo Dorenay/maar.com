@@ -14,7 +14,7 @@
     <?php foreach( $posts as $post ): ?>
             <div class="post__item">
                 <div class="post__thumbnail">
-                    <?php the_tumbnail(); ?>
+                    <!-- <?php the_post_thumbnail(); ?> 
                 </div>
                 <div class="post__thumbnail">
                     <?php
