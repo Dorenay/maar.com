@@ -18,12 +18,11 @@
                 ?>
                 <a class="post__item" href="<?php the_permalink();?>">
                     <div class="post__thumbnail">
-                        <?php the_post_thumbnail(); ?> 
+                        <?php the_post_thumbnail('post_thumbnail'); ?> 
                     </div>
                     <div class="post__body">
                         <h2><?php the_title(); ?></h2>
                         <?php
-                            the_content();
                             the_excerpt();                            
                         ?>
                     </div>

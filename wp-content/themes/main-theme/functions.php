@@ -29,6 +29,7 @@ endif;
 add_action( 'after_setup_theme', 'theme_setup' );
 
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'post_thumbnail', 320, 150, true );
 
 
 function theme_scripts() {
