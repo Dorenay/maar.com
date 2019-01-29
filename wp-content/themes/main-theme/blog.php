@@ -2,12 +2,12 @@
 /*Template name: Blog - main*/
     get_header();
     include('page-title.php');
+
     $posts = get_posts( array(
         'numberposts' => -1,
         'orderby'     => 'date',
         'order'       => 'DESC',
-        'post_type'   => 'post',
-        'post_per_page' => 1
+        'post_type'   => 'post'
     ) );
 ?>
     <div class="post__list">
