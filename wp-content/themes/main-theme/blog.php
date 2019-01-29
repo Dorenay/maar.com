@@ -12,7 +12,10 @@
 ?>
     <div class="container">
         <div class="post__list">
-        <?php foreach( $posts as $post ): ?>
+        <?php 
+            if (have_posts() ) : 
+                while ( have_posts() ) : the_post(); 
+                ?>
                 <a class="post__item" href="<?php the_permalink();?>">
                     <div class="post__thumbnail">
                         <?php the_post_thumbnail(); ?> 
@@ -23,28 +26,11 @@
                             the_content();
                             the_excerpt();                            
                         ?>
-                            post
-                        <?
-                        // while ( $post->have_posts() ) {
-                        //     $post->the_post();
-                        //     the_content();
-                        //     the_excerpt();                            
-
-                        // }
-                        ?>
-                            posts
-                        <?
-                        while ( $posts->have_posts() ) {
-                            $posts->the_post();
-                            the_content();
-                            the_excerpt();                            
-
-                        }?>                        
-
-                        <?php endwhile; endif; ?>
                     </div>
                 </div>
-            <?php endforeach;?>
+                <?
+                endwhile;
+            endif;?>
         </div>
     </div>
 <?php
