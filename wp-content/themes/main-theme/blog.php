@@ -20,6 +20,7 @@
                     <div class="post__body">
                         <h2><?php the_title(); ?></h2>
                         <?php
+                            the_content();
                             the_excerpt();                            
                         ?>
                     </div>
