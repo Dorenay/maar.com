@@ -23,9 +23,22 @@
                             the_content();
                             the_excerpt();                            
                         ?>
-                        <?php if (have_posts()) : while (have_posts()) : ?>
-                        <?php the_content(); ?>
-                        <?php the_excerpt(); ?>
+                            post
+                        <?
+                        while ( $post->have_posts() ) {
+                            $post->the_post();
+                            the_content();
+                            the_excerpt();                            
+
+                        }?>
+                            posts
+                        <?
+                        while ( $posts->have_posts() ) {
+                            $posts->the_post();
+                            the_content();
+                            the_excerpt();                            
+
+                        }?>                        
 
                         <?php endwhile; endif; ?>
                     </div>
