@@ -8,19 +8,22 @@
         'post_type'   => 'post',
         'post_per_page' => 1
     ) );
-    echo '<div class="post__list">';
-        foreach( $posts as $post ){
-            echo '<div class="post__item">';
-                echo '<div class="post__thumbnail">';
-                    the_tumbnail();
-                echo '</div>'
-                echo '<div class="post__thumbnail">';
+?>
+    <div class="post__list">
+    <?php foreach( $posts as $post ): ?>
+            <div class="post__item">
+                <div class="post__thumbnail">
+                    <?php the_tumbnail(); ?>
+                </div>
+                <div class="post__thumbnail">
+                    <?php
                     the_title();
                     the_permalink();
-                echo '</div>';
-            echo '</div>';
-        }
-    echo '</div>';
-
+                    ?>
+                </div>
+            </div>
+        <?php endforeach;?>
+    </div>
+<?php
     get_footer();
 ?>
