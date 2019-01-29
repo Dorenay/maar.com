@@ -10,20 +10,22 @@
         'post_type'   => 'post'
     ) );
 ?>
-    <div class="post__list">
-    <?php foreach( $posts as $post ): ?>
-            <div class="post__item">
-                <div class="post__thumbnail">
-                    <?php the_post_thumbnail(); ?> 
+    <div class="container">
+        <div class="post__list">
+        <?php foreach( $posts as $post ): ?>
+                <a class="post__item" href="<?php the_permalink();?>">
+                    <div class="post__thumbnail">
+                        <?php the_post_thumbnail(); ?> 
+                    </div>
+                    <div class="post__body">
+                        <?php
+                            the_title('h2', 'h2', '');
+                            the_excerpt();                            
+                        ?>
+                    </div>
                 </div>
-                <div class="post__thumbnail">
-                    <?php
-                    the_title();
-                    the_permalink();
-                    ?>
-                </div>
-            </div>
-        <?php endforeach;?>
+            <?php endforeach;?>
+        </div>
     </div>
 <?php
     get_footer();
