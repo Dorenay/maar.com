@@ -1,6 +1,7 @@
 <?php
 /*Template name: Blog - main*/
     get_header();
+    include('page-title.php');
     $posts = get_posts( array(
         'numberposts' => -1,
         'orderby'     => 'date',
